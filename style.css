@@ -1,0 +1,170 @@
+/*DESKTOP DESIGN
+*/
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Manrope', sans-serif;
+}
+body{
+    font-size: 13px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(210, 46%, 95%);
+}
+.container{
+    display: flex;
+    flex-direction: row;
+    width:59rem;
+    height: 40vh;
+    -webkit-box-shadow: -1px 5px 15px 5px rgba(0,0,0,0.5); 
+    box-shadow: -1px 5px 15px 5px rgba(0,0,0,0.5);
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+.levo{
+    width:40%;
+    background:url('images/drawers.jpg');
+    background-size: cover;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+.desno{
+    width: 60%;
+    padding:5%;
+    background-color: white;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+.profil{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: -5%;
+}
+.sredina{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: -65%;
+}
+.michelle{
+    border-radius: 50%;
+    transform: scale(0.25);
+    margin-left: -14%;
+    
+}
+.share{
+    transform: scaleX(2) scaleY(2.5);
+    margin-top: 60pt;
+    margin-right: 1%;
+    background-color: black;
+    border-radius: 50%;
+}
+.dva{
+    font-weight: 500;
+}
+h1,.jen{
+    color:hsl(217, 19%, 35%);
+}
+p,.dva{
+    color:hsl(214, 17%, 51%);
+}
+p{
+    font-size: 14px;
+    margin-top: 5%;
+    line-height: 1.5;
+}
+.tooltip {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    display: inline-block;
+  }
+  
+  .tooltip .tooltiptext {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 0.4rem;
+    visibility: hidden;
+    width: 240px;
+    height: 50px;
+    background-color:  hsl(217, 19%, 35%);
+    color: hsl(212, 23%, 69%);
+    text-align: center;
+    border-radius: 10px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 150%;
+    left: 50%;
+    top:5%;
+    margin-left: -125px;
+  }
+  
+  .tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    border-width: 5px;
+    border-style: solid;
+    border-color: hsl(217, 19%, 35%) transparent transparent transparent;
+  }
+/*ACTIVE STATES
+*/
+.share:hover{
+    background-color: hsl(214, 17%, 51%);
+    fill:red;
+}
+.tooltiptext img{
+    margin-left: 5%;
+}
+/*MOBILE DESIGN
+*/
+@media screen and (max-width:375px){
+    .container{
+        margin-top: 5%;
+        width: 90%;
+        height: 100vh;
+        flex-direction: column;
+    }
+    .levo,.desno{
+        width: 100%;
+        border-radius: 0;
+    }
+    .levo{
+        height: 30%;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+    }
+    .desno{
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+    }
+    .michelle{
+        margin-left: -20%;
+    }
+    .sredina{
+        margin-left: -50%;
+    }
+    .tooltip .tooltiptext{
+        margin-left: -300px;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        width: 280px;
+        top:35%;
+        z-index:1;
+    }
+    .tooltip .tooltiptext::after{
+        border-width: 0;
+        border-style:none;
+        border-color: none;
+    }
+}
